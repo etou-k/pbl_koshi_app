@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context="data.QuizActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- ===== 1. 問題エリア: クイズの進行中に表示されるエリア ===== -->
+        <LinearLayout
+            android:id="@+id/quiz_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 進捗表示 -->
+            <TextView
+                android:id="@+id/text_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/quiz_progress_placeholder"
+                android:textSize="18sp"
+                android:layout_gravity="end"
+                android:layout_marginBottom="8dp"/>
+
+
+            <!-- 問題文 -->
+            <TextView
+                android:id="@+id/text_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/question_placeholder"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="24dp"/>
+
+            <!-- 2. 解答選択エリア: 選択肢ボタン -->
+            <LinearLayout
+                android:id="@+id/layout_options"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_option_a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:paddingVertical="12dp"
+                    android:textSize="16sp"
+                    android:text="@string/option_a_placeholder"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_option_b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:paddingVertical="12dp"
+                    android:textSize="16sp"
+                    android:text="@string/option_b_placeholder"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_option_c"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:paddingVertical="12dp"
+                    android:textSize="16sp"
+                    android:text="@string/option_c_placeholder"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_option_d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:paddingVertical="12dp"
+                    android:textSize="16sp"
+                    android:text="@string/option_d_placeholder"/>
+
+            </LinearLayout>
+
+
+            <!-- 3. 結果/解説エリア (解答後に表示) -->
+            <LinearLayout
+                android:id="@+id/layout_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="24dp"
+                android:padding="12dp"
+                android:background="#F3F3F3"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/text_result_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/result_status_placeholder"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:id="@+id/text_commentary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/commentary_placeholder"
+                    android:layout_marginTop="8dp"/>
+
+                <Button
+                    android:id="@+id/button_next"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/next_question_button"
+                    android:layout_marginTop="16dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- ===== 4. 最終結果・誘導エリア (5問終了時に表示) ===== -->
+        <LinearLayout
+            android:id="@+id/final_result_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:visibility="gone"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/text_final_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/final_score_placeholder"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/final_message"
+                android:textSize="18sp"
+                android:layout_marginBottom="24dp"/>
+
+            <!-- スポット詳細画面へ誘導するボタン -->
+            <Button
+                android:id="@+id/button_to_spot_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/go_to_spot_detail_button"
+                android:padding="16dp"
+                android:backgroundTint="#4CAF50"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
