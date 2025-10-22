@@ -15,8 +15,8 @@ public class SecondFragment extends Fragment {
 
     private FragmentSecondBinding binding;
 
-    @Override
-    public View onCreateView(
+   // @Override
+    /*public View onCreateView(
             @NonNull LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState
     ) {
@@ -33,7 +33,7 @@ public class SecondFragment extends Fragment {
                 NavHostFragment.findNavController(SecondFragment.this)
                         .navigate(R.id.action_SecondFragment_to_HomeFragment)
         );
-    }
+    }*/
 
     @Override
     public void onDestroyView() {

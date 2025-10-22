@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.content.Intent;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -28,10 +29,12 @@ public class HomeFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         // 観光スポット画面へ（既存のSecondFragmentを利用）
-        binding.buttonSpot.setOnClickListener(v ->
-                NavHostFragment.findNavController(HomeFragment.this)
-                        .navigate(R.id.action_HomeFragment_to_SecondFragment)
-        );
+        binding.buttonSpot.setOnClickListener(v -> {
+            // Intentを作成して、次に起動するActivityを指定します
+            Intent intent = new Intent(getActivity(), SpotListActivity.class);
+            // Activityを開始します
+            startActivity(intent);
+        });
 
         // クイズ画面へ（今後作成する QuizFragment へ）
         binding.buttonQuiz.setOnClickListener(v ->

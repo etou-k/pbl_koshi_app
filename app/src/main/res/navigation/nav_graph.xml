@@ -3,49 +3,40 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/HomeFragment"> <!-- 変更: 開始画面をHomeFragmentに -->
+    app:startDestination="@id/HomeFragment">
 
     <fragment
-        android:id="@+id/HomeFragment" <!-- 変更: ID -->
-    android:name="com.example.pbl_koshi_app.HomeFragment" <!-- 変更: Javaクラス名 -->
-    android:label="ホーム画面" <!-- 変更: ラベル (直接指定) -->
-    tools:layout="@layout/fragment_home">
+        android:id="@+id/HomeFragment"
+        android:name="com.example.pbl_koshi_app.HomeFragment"
+        android:label="ホーム画面"
+        tools:layout="@layout/fragment_home">
 
-    <!-- 変更: HomeFragmentからのAction ID -->
-    <action
-        android:id="@+id/action_HomeFragment_to_SecondFragment"
-        app:destination="@id/SecondFragment" />
-
-    <!-- 追加: クイズ画面へのAction -->
-    <action
-        android:id="@+id/action_HomeFragment_to_QuizFragment"
-        app:destination="@id/QuizFragment" />
-</fragment>
-
-<fragment
-android:id="@+id/SecondFragment"
-android:name="com.example.pbl_koshi_app.SecondFragment"
-android:label="観光スポット" <!-- 変更: ラベル (仮) -->
-    tools:layout="@layout/fragment_second">
-
-    <!-- 変更: HomeFragmentへ戻るAction -->
-<action
-android:id="@+id/action_SecondFragment_to_HomeFragment"
-app:destination="@id/HomeFragment" />
+        <action
+            android:id="@+id/action_HomeFragment_to_QuizFragment"
+            app:destination="@id/QuizFragment" />
     </fragment>
 
-    <!-- 追加: クイズ画面の定義 (プレースホルダ) -->
-    <!-- TODO: クイズ画面用の QuizFragment.java と fragment_quiz.xml を作成してください -->
-<fragment
-android:id="@+id/QuizFragment"
-android:name="com.example.pbl_koshi_app.QuizFragment"
-android:label="クイズ画面"
-tools:layout="@layout/fragment_quiz" >
+    <fragment
+        android:id="@+id/QuizFragment"
+        android:name="com.example.pbl_koshi_app.QuizFragment"
+        android:label="クイズ画面"
+        tools:layout="@layout/fragment_quiz" >
 
-<!-- 追加: クイズ画面からホームに戻るAction -->
-<action
-    android:id="@+id/action_QuizFragment_to_HomeFragment"
-    app:destination="@id/HomeFragment" />
-</fragment>
+        <action
+            android:id="@+id/action_QuizFragment_to_HomeFragment"
+            app:destination="@id/HomeFragment" />
+    </fragment>
 
-    </navigation>
+    <fragment
+        android:id="@+id/SpotListFragment"
+        android:name="com.example.pbl_koshi_app.SecondFragment"
+        android:label="スポット一覧画面"
+        tools:layout="@layout/fragment_second">
+
+        <action
+            android:id="@+id/action_SpotListFragment_to_HomeFragment"
+            app:destination="@id/HomeFragment" />
+
+    </fragment>
+
+</navigation>
