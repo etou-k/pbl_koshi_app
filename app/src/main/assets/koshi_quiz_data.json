@@ -1,0 +1,53 @@
+{
+  "quiz_spot_list": [
+    {
+      "id": "KOSHI_SPOT_001",
+      "spotName": "熊本県農業公園カントリーパーク",
+      "quizList": [
+        {
+          "questionNumber": 1,
+          "questionText": "カントリパークには4つの広場がありますが、一番広い芝生広場はどれでしょう？",
+          "option": {
+            "A": "わんぱく広場",
+            "B": "わくわく広場",
+            "C": "のびのび広場",
+            "D": "ゆうゆう広場"
+          },
+          "correctOption": "D",
+          "commentary": "正解はゆうゆう広場！ここは、14000㎡の広大な土地でグラウンドゴルフもできます。",
+          "relatedSpotId": "KOSHI_SPOT_001"
+        },
+        {
+          "questionNumber": 2,
+          "questionText": "カントリパークの休園日は何曜日でしょう？",
+          "option": {
+            "A": "月曜日",
+            "B": "火曜日",
+            "C": "水曜日",
+            "D": "木曜日"
+          },
+          "correctOption": "B",
+          "commentary": "正解は火曜日です。ただし、火曜日が祝日の場合は開園し、翌日が休みとなります。訪れる際は公式サイトをチェックしよう!",
+          "relatedSpotId": "KOSHI_SPOT_001"
+        },
+        {
+          "questionNumber": 3,
+          "questionText": "2022年からカントリパークで野外フェスが開催されていますが、主催者は誰でしょう？",
+          "option": {
+            "A": "BLUE ENCOUNT",
+            "B": "10-FEET",
+            "C": "WANIMA",
+            "D": "SUPER BEAVER"
+          },
+          "correctOption": "C",
+          "commentary": "正解はWANIMA! WANIMAは熊本出身のロックバンドで、WANIMA主催の野外フェスは毎年8月末もしくは9月上旬に開催されています。",
+          "relatedSpotId": "KOSHI_SPOT_001"
+        },
+        {
+          "questionNumber": 4,
+          "questionText": "カントリパークで毎年春と秋に開催される、"
+        }
+      ]
+    }
+  ]
+}
