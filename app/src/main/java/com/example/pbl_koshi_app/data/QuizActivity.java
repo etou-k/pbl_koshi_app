@@ -268,28 +268,38 @@ public class QuizActivity extends AppCompatActivity {
 
         private static final String JSON_FILE_NAME = "koshi_quiz_data.json";
 
+        // QuizDataLoader クラス内の getRandomQuizSet メソッドを以下に置き換える
+
         public static SpotQuiz getRandomQuizSet(Context context) {
             String jsonString = loadJsonFromAsset(context, JSON_FILE_NAME);
-            if (jsonString == null) {
-                return null;
+            if (jsonString == null) {return null;
             }
 
             Gson gson = new Gson();
-            // JSONのルートがQuizItemのリストであることを示すTypeToken
-            Type listType = new TypeToken<List<SpotQuiz>>() {}.getType();
 
-            // JSONをJavaオブジェクトのリストに変換
-            List<SpotQuiz> allQuizSets = gson.fromJson(jsonString, listType);
+            // 手順1: JSONの最も外側の配列 [ ... ] を読み取る
+            // 型定義: QuizSpotListContainerの配列
+            Type outerListType = new TypeToken<List<QuizSpotListContainer>>() {}.getType();
+            List<QuizSpotListContainer> outerList = gson.fromJson(jsonString, outerListType);
+
+            // JSONの構造が想定外なら、即座に処理を中断
+            if (outerList == null || outerList.isEmpty() || outerList.get(0) == null) {
+                return null;
+            }
+
+            // 手順2: 最初の要素から "quiz_spot_list" の中身（SpotQuizのリスト）を取り出す
+            List<SpotQuiz> allQuizSets = outerList.get(0).getQuizSpotList();
 
             if (allQuizSets == null || allQuizSets.isEmpty()) {
                 return null;
             }
 
-            // リストからランダムに1つのSpotQuizを選択
+            // 手順3: リストからランダムに1つのSpotQuizを選択して返す
             Random random = new Random();
             return allQuizSets.get(random.nextInt(allQuizSets.size()));
 
         }
+
 
         /**
          * assetsフォルダから指定されたJSONファイルの内容を文字列として読み込む
@@ -311,4 +321,21 @@ public class QuizActivity extends AppCompatActivity {
             return json;
         }
     }
+
+    // =========================================================================
+    // JSONの特殊な構造を読み解くための「入れ物」クラス
+    // =========================================================================
+
+    /**
+     * JSONの "quiz_spot_list" というキーを読み取るためのクラス
+     */
+    class QuizSpotListContainer {
+        // JSONの "quiz_spot_list" キーと名前を一致させる
+        private List<SpotQuiz> quiz_spot_list;
+
+        public List<SpotQuiz> getQuizSpotList() {
+            return quiz_spot_list;
+        }
+    }
+
 }
