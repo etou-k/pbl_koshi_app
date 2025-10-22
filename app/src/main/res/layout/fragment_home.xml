@@ -5,30 +5,133 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F0F4F8"
     tools:context=".HomeFragment">
 
-    <Button
-        android:id="@+id/button_spot"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="観光スポット"
-        app:layout_constraintBottom_toTopOf="@+id/button_quiz"
+    <!-- 1. メイン画像 -->
+    <!-- TODO: @drawable/koshi_main_image の部分を、ご自身で用意した合志市の写真ファイル名に差し替えてください -->
+    <ImageView
+        android:id="@+id/image_header"
+        android:layout_width="0dp"
+        android:layout_height="220dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher_background"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.424"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="packed" />
+        android:contentDescription="合志市のイメージ画像" />
 
-    <Button
-        android:id="@+id/button_quiz"
+    <!-- 2. タイトルテキスト -->
+    <TextView
+        android:id="@+id/text_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="クイズ"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="24dp"
+        android:text="ようこそ合志市へ"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.429"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_spot" />
+        app:layout_constraintTop_toBottomOf="@id/image_header" />
+
+    <!-- 3. 「観光スポット」カードボタン -->
+    <!-- MaterialCardView を使うには、build.gradleに 'com.google.android.material:material:...' の依存関係が必要です -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/button_spot"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="32dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:layout_constraintTop_toBottomOf="@id/text_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:clickable="true"
+        android:focusable="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- TODO: @drawable/ic_map の部分を、ご自身で追加した観光スポット用アイコン名に差し替えてください -->
+            <ImageView
+                android:id="@+id/icon_spot"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="24dp"
+                android:contentDescription="観光スポット アイコン"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@android:drawable/ic_menu_mapmode"
+                app:tint="?attr/colorPrimary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="観光スポット"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.2"
+                app:layout_constraintStart_toEndOf="@id/icon_spot"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- 4. 「クイズ」カードボタン -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/button_quiz"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="24dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:layout_constraintTop_toBottomOf="@id/button_spot"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:clickable="true"
+        android:focusable="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- TODO: @drawable/ic_quiz の部分を、ご自身で追加したクイズ用アイコン名に差し替えてください -->
+            <ImageView
+                android:id="@+id/icon_quiz"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="24dp"
+                app:srcCompat="@android:drawable/ic_menu_help"
+                app:tint="?attr/colorPrimary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:contentDescription="クイズ アイコン" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="合志市クイズ"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toEndOf="@id/icon_quiz"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
