@@ -7,7 +7,7 @@
         {
           "questionNumber": 1,
           "questionText": "カントリパークには4つの広場がありますが、一番広い芝生広場はどれでしょう？",
-          "option": {
+          "options": {
             "A": "わんぱく広場",
             "B": "わくわく広場",
             "C": "のびのび広場",
@@ -20,7 +20,7 @@
         {
           "questionNumber": 2,
           "questionText": "カントリパークの休園日は何曜日でしょう？",
-          "option": {
+          "options": {
             "A": "月曜日",
             "B": "火曜日",
             "C": "水曜日",
@@ -33,7 +33,7 @@
         {
           "questionNumber": 3,
           "questionText": "2022年からカントリパークで野外フェスが開催されていますが、主催者は誰でしょう？",
-          "option": {
+          "options": {
             "A": "BLUE ENCOUNT",
             "B": "10-FEET",
             "C": "WANIMA",
@@ -45,9 +45,32 @@
         },
         {
           "questionNumber": 4,
-          "questionText": "カントリパークで毎年春と秋に開催される、"
+          "questionText": "子供たちが複合遊具で体を動かして遊べるカントリーパーク内の人気エリアの名称は？",
+          "options": {
+            "A": "のびのび広場",
+            "B": "わんぱく広場",
+            "C": "くぬぎの丘",
+            "D": "カントリータワー"
+          },
+          "correctOption": "B",
+          "commentary": "正解はわんぱく広場！ターザンロープや滑り台など、元気いっぱいに遊べる道具が揃っています。",
+          "relatedSpotId": "KOSHI_SPOT_001"
+        },
+        {
+          "questionNumber": 5,
+          "questionText": "熊本農業公園カントリーパークのバラ園に植えられている、バラの品種数として正しいものは？",
+          "options": {
+            "A": "約100品種",
+            "B": "約300品種",
+            "C": "約550品種",
+            "D": "約800品種"
+          },
+          "correctOption": "C",
+          "commentary": "正解は「約500品種」です！約3500下部のバラが咲き誇る光景は圧巻の一言。特に春と秋に開催されるバラ祭の時期は必見です。ぜひレターバスに乗って見に来てくださいね！",
+          "relatedSpotId": "KOSHI_SPOT_001"
         }
       ]
     }
   ]
 }
+
