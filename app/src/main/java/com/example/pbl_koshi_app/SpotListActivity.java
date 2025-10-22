@@ -21,11 +21,8 @@ public class SpotListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_spot_list);
 
-        spotList = new ArrayList<>();
-        // ここに観光地のデータを追加
-        spotList.add(new Spot("観光地1", "観光地1の説明です。", R.drawable.ic_launcher_background));
-        spotList.add(new Spot("観光地2", "観光地2の説明です。", R.drawable.ic_launcher_background));
-        spotList.add(new Spot("観光地3", "観光地3の説明です。", R.drawable.ic_launcher_background));
+        // SpotDataクラスから観光地リストを取得
+        spotList = SpotData.getSpots();
 
         ListView spotListView = findViewById(R.id.spotListView);
         List<String> spotNames = new ArrayList<>();
