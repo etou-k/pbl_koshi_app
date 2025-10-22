@@ -288,6 +288,7 @@ public class QuizActivity extends AppCompatActivity {
             // リストからランダムに1つのSpotQuizを選択
             Random random = new Random();
             return allQuizSets.get(random.nextInt(allQuizSets.size()));
+
         }
 
         /**

@@ -37,10 +37,12 @@ public class HomeFragment extends Fragment {
         });
 
         // クイズ画面へ（今後作成する QuizFragment へ）
-        binding.buttonQuiz.setOnClickListener(v ->
-                NavHostFragment.findNavController(HomeFragment.this)
-                        .navigate(R.id.action_HomeFragment_to_QuizFragment)
-        );
+        binding.buttonQuiz.setOnClickListener(v -> {
+            // Intentを作成して、次に起動するActivityを指定します
+            Intent intent = new Intent(getActivity(), com.example.pbl_koshi_app.data.QuizActivity.class);
+            // Activityを開始します
+            startActivity(intent);
+        });
     }
 
     @Override
