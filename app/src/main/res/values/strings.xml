@@ -6,6 +6,21 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+    <string name="quiz_progress_placeholder">進捗: 1/5</string>
+    <string name="question_placeholder">ここに問題文が表示されます。</string>
+
+    <string name="option_a_placeholder">選択肢A</string>
+    <string name="option_b_placeholder">選択肢B</string>
+    <string name="option_c_placeholder">選択肢C</string>
+    <string name="option_d_placeholder">選択肢D</string>
+
+    <string name="result_status_placeholder">正解！</string>
+    <string name="commentary_placeholder">ここに解説文が表示されます。</string>
+    <string name="next_question_button">次の問題へ</string>
+
+    <string name="final_score_placeholder">スコア: %2$d問中%1$d問正解！</string>
+    <string name="final_message">お疲れ様でした！</string>
+    <string name="go_to_spot_detail_button">%1$s の詳細を見る</string>
 
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
