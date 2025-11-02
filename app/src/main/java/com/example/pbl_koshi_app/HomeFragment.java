@@ -1,14 +1,13 @@
 package com.example.pbl_koshi_app;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.content.Intent;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.pbl_koshi_app.databinding.FragmentHomeBinding;
 
@@ -28,21 +27,25 @@ public class HomeFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        // 観光スポット画面へ（既存のSecondFragmentを利用）
+        // 観光スポット(SpotListActivity)画面へ
         binding.buttonSpot.setOnClickListener(v -> {
-            // Intentを作成して、次に起動するActivityを指定します
             Intent intent = new Intent(getActivity(), SpotListActivity.class);
-            // Activityを開始します
             startActivity(intent);
         });
 
-        // クイズ画面へ（今後作成する QuizFragment へ）
+        // クイズ(QuizActivity)画面へ
         binding.buttonQuiz.setOnClickListener(v -> {
-            // Intentを作成して、次に起動するActivityを指定します
             Intent intent = new Intent(getActivity(), com.example.pbl_koshi_app.data.QuizActivity.class);
-            // Activityを開始します
             startActivity(intent);
         });
+
+        // ★★★ 図鑑(EncyclopediaActivity)画面への処理を追加 ★★★
+        // buttonEncyclopedia は fragment_home.xml で定義したIDに合わせてください
+        binding.buttonEncyclopedia.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), EncyclopediaActivity.class);
+            startActivity(intent);
+        });
+
     }
 
     @Override

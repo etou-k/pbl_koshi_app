@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_brown"
+    tools:context=".EncyclopediaActivity">
+
+    <!-- 1. タイトル -->
+    <TextView
+        android:id="@+id/text_title_encyclopedia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:gravity="center"
+        android:text="発見した豆知識図鑑"
+        android:textColor="@color/dark_brown"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <!-- 2. 閉じるボタン (画面下部に配置) -->
+    <Button
+        android:id="@+id/button_close_encyclopedia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="16dp"
+        android:text="閉じる" />
+
+    <!-- 3. 豆知識リスト (タイトルと閉じるボタンの間に配置) -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_encyclopedia"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/button_close_encyclopedia"
+        android:layout_below="@id/text_title_encyclopedia"
+        tools:listitem="@layout/list_item_trivia" />
+
+</RelativeLayout>

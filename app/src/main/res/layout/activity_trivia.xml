@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="@color/light_brown"
+    tools:context=".TriviaActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="新しい豆知識を発見！"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/dark_brown"
+        android:layout_marginBottom="32dp"/>
+
+    <TextView
+        android:id="@+id/text_trivia_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp"
+        android:background="@drawable/text_view_background"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        tools:text="ここに発見した豆知識のテキストが表示されます。これはプレビュー用の仮テキストです。"/>
+
+    <Button
+        android:id="@+id/button_close_trivia"
+        style="@style/BrownButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="閉じる"/>
+
+</LinearLayout>
