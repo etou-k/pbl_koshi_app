@@ -40,7 +40,6 @@ public class HomeFragment extends Fragment {
         });
 
         // ★★★ 図鑑(EncyclopediaActivity)画面への処理を追加 ★★★
-        // buttonEncyclopedia は fragment_home.xml で定義したIDに合わせてください
         binding.buttonEncyclopedia.setOnClickListener(v -> {
             Intent intent = new Intent(getActivity(), EncyclopediaActivity.class);
             startActivity(intent);

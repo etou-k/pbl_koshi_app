@@ -27,8 +27,8 @@ public class SpotData {
                 "観光地2",
                 "観光地2の説明です。",
                 R.drawable.ic_launcher_background,
-                37.4219,
-                -122.0840,
+                50.9861,
+                122.0840,
                 "ID2",
                 Arrays.asList(
                         "豆知識1",

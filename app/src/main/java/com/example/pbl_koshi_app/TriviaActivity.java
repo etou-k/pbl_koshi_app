@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.Random;
 
 public class TriviaActivity extends AppCompatActivity {
 
@@ -29,13 +30,15 @@ public class TriviaActivity extends AppCompatActivity {
 
         // --- 豆知識の表示処理 ---
         if (spot != null && spot.getTriviaList() != null && !spot.getTriviaList().isEmpty()) {
-            // 今回は簡単のため、最初の豆知識を表示
-            // TODO: 将来的には、未発見の豆知識をランダムに選ぶなどの改良が可能
-            String trivia = spot.getTriviaList().get(0);
+            List<String> triviaList = spot.getTriviaList();
+            Random random = new Random();
+            int randomIndex = random.nextInt(triviaList.size());
+
+            String trivia = triviaList.get(randomIndex);
             triviaTextView.setText(trivia);
 
             // この豆知識を発見済みとして保存
-            saveTriviaAsDiscovered(spot.getId(), 0); // spotのIDと豆知識のインデックス(0番目)
+            saveTriviaAsDiscovered(spot.getId(), randomIndex); // spotのIDと豆知識のインデックス(0番目)
         } else {
             // ★★★ データが受け取れなかった場合の表示を追加 ★★★
             triviaTextView.setText("豆知識が見つかりませんでした。データを確認してください。");

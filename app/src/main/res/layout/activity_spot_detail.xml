@@ -28,6 +28,23 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp" />
 
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/text_distance_to_treasure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="8dp"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:text="宝箱まで ??? m" />
+
+
     <!-- 宝箱（ImageButton）の要素 -->
     <ImageButton
         android:id="@+id/button_trivia_treasure"
@@ -44,7 +61,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:text="ホームに戻る" />
 
 </LinearLayout>

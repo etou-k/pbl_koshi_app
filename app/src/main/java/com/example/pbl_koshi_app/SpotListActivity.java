@@ -21,8 +21,9 @@ public class SpotListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_spot_list);
 
-        // SpotDataクラスから観光地リストを取得
-        spotList = SpotData.getSpots();
+        // 新しいデータローダーを使ってJSONからデータを読み込む
+        spotList = com.example.pbl_koshi_app.data.SpotDataLoader.loadSpots(this);
+
 
         ListView spotListView = findViewById(R.id.spotListView);
         List<String> spotNames = new ArrayList<>();

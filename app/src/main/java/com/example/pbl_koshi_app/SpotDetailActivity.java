@@ -24,6 +24,8 @@ import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationResult;
 import com.google.android.gms.location.LocationServices;
 
+import java.util.Locale;
+
 public class SpotDetailActivity extends AppCompatActivity {
 
     private static final double DISTANCE_THRESHOLD_METERS = 100.0; // 宝箱を開けられる距離（メートル）
@@ -34,6 +36,8 @@ public class SpotDetailActivity extends AppCompatActivity {
     private FusedLocationProviderClient fusedLocationClient;
     private LocationCallback locationCallback;
 
+    private TextView distanceTextView;
+
     // 位置情報のパーミッションリクエストランチャー
     private final ActivityResultLauncher<String> requestPermissionLauncher = registerForActivityResult(
             new ActivityResultContracts.RequestPermission(),
@@ -43,6 +47,7 @@ public class SpotDetailActivity extends AppCompatActivity {
                 } else {
                     Toast.makeText(this, "位置情報の許可が必要です", Toast.LENGTH_SHORT).show();
                     updateTreasureButtonState(false); // 許可されなければ宝箱は開けられない
+                    distanceTextView.setText("宝箱まで計測不可");
                 }
             }
     );
@@ -59,6 +64,8 @@ public class SpotDetailActivity extends AppCompatActivity {
         TextView spotDescriptionTextView = findViewById(R.id.spotDescriptionTextView);
         Button backToHomeButton = findViewById(R.id.button_back_to_home);
         triviaTreasureButton = findViewById(R.id.button_trivia_treasure);
+        distanceTextView = findViewById(R.id.text_distance_to_treasure);
+
 
         Intent intent = getIntent();
         currentSpot = (Spot) intent.getSerializableExtra("spot");
@@ -104,6 +111,7 @@ public class SpotDetailActivity extends AppCompatActivity {
 
                         // 距離に応じて宝箱の状態を更新
                         updateTreasureButtonState(distanceInMeters < DISTANCE_THRESHOLD_METERS);
+                        updateDistanceText(distanceInMeters);
                     }
                 }
             }
@@ -149,5 +157,17 @@ public class SpotDetailActivity extends AppCompatActivity {
     private void updateTreasureButtonState(boolean enabled) {
         triviaTreasureButton.setEnabled(enabled);
         triviaTreasureButton.setAlpha(enabled ? 1.0f : 0.3f); // 有効なら不透明、無効なら半透明
+    }
+
+    private void updateDistanceText(float distanceInMeters) {
+        String distanceText;
+        if (distanceInMeters < DISTANCE_THRESHOLD_METERS) {
+            distanceText = "宝箱まであと少し！";
+        } else if (distanceInMeters < 1000) {
+            distanceText = String.format(Locale.JAPAN, "宝箱まで %d m", (int) distanceInMeters);
+        } else {
+            distanceText = String.format(Locale.JAPAN, "宝箱まで %.1f km", distanceInMeters / 1000.0f);
+        }
+        distanceTextView.setText(distanceText);
     }
 }
