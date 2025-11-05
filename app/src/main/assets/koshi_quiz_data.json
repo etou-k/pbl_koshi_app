@@ -95,49 +95,49 @@
             "A": "西合志町役場",
             "B": "旧西合志郷土資料館",
             "C": "旧合志市立図書館",
-            "D": "合志市文化センター"
+            "D": "合志市文化会館"
           },
           "correctOption": "B",
-          "commentary": "",
+          "commentary": "正解は「旧西合志郷土資料館」です! マンガミュージアムでは地域の歴史を伝えてきた資料館としての役割を尊重し、マンガで合志や熊本の歴史と文化が学べます!",
           "relatedSpotId": "KOSHI_SPOT_002"
         },
         {
           "questionNumber": 3,
-          "questionText": "",
+          "questionText": "ミュージアムの特徴的な閲覧スペースであり、熊本県産の木材で作られた立方体のくつろぎ空間の愛称は?",
           "options": {
-            "A": "",
-            "B": "",
-            "C": "",
-            "D": ""
+            "A": "マンガの繭",
+            "B": "ウッド・ルーム",
+            "C": "キューブ",
+            "D": "ボックス"
           },
-          "correctOption": "",
-          "commentary": "",
+          "correctOption": "C",
+          "commentary": "正解は「キューブ」です! 熊本の木材で作られたユニークな立方体「キューブ」に座って、くつろぎながらマンガを楽しもう!",
           "relatedSpotId": "KOSHI_SPOT_002"
         },
         {
           "questionNumber": 4,
-          "questionText": "",
+          "questionText": "ミュージアムで定期的に開催されている、マンガの描き方やストーリー制作を学べる体験型のイベントの名称は?",
           "options": {
-            "A": "",
-            "B": "",
-            "C": "",
-            "D": ""
+            "A": "マンガワークショップ",
+            "B": "アフレコ体験",
+            "C": "デジタルイラスト教室",
+            "D": "アニメーション制作体験"
           },
-          "correctOption": "",
-          "commentary": "",
+          "correctOption": "A",
+          "commentary": "正解は「マンガワークショップ」です! 毎月第2・第4日曜日に、イラストを描いたり缶バッジ・カード作りなどの体験教室を開催しています!",
           "relatedSpotId": "KOSHI_SPOT_002"
         },
         {
           "questionNumber": 5,
-          "questionText": "",
+          "questionText": "ミュージアムが所蔵する約6万冊を超えるマンガの、最も主要な収集方法は次のうちどれですか?",
           "options": {
-            "A": "",
-            "B": "",
-            "C": "",
-            "D": ""
+            "A": "新刊書店での購入",
+            "B": "全国の図書館からの移譲",
+            "C": "出版社との直接契約",
+            "D": "市民やマンガ愛好家からの寄贈"
           },
-          "correctOption": "",
-          "commentary": "",
+          "correctOption": "D",
+          "commentary": "正解は「寄贈」です! この膨大な蔵書は、市民やマンガ愛好家からの善意の寄贈によって成り立っています。あなたのお気に入りの一冊も見つかるかも?",
           "relatedSpotId": "KOSHI_SPOT_002"
         }
       ]
@@ -156,7 +156,7 @@
             "D": "みかん"
           },
           "correctOption": "A",
-          "commentary": "正解はいちご! 合志百花園ファームでは、イチゴ狩りを楽しむことができます!",
+          "commentary": "正解は「いちご」です! 合志百花園ファームでは、イチゴ狩りを楽しむことができます!",
           "relatedSpotId": "KOSHI_SPOT_003"
         },
         {
@@ -169,79 +169,79 @@
             "D": "高設栽培"
           },
           "correctOption": "D",
-          "commentary": "正解は高設栽培! 高設栽培なので快適に収穫体験を楽しめるのも魅力です!",
-          "relatedSpotId": "KOSHI_SPOT_002"
+          "commentary": "正解は「高設栽培」です! 高設栽培なので快適に収穫体験を楽しめるのも魅力です!",
+          "relatedSpotId": "KOSHI_SPOT_003"
         },
         {
           "questionNumber": 3,
-          "questionText": "",
+          "questionText": "合志百花園ファームでは何種類のイチゴを食べることができるでしょうか?",
           "options": {
-            "A": "",
-            "B": "",
-            "C": "",
-            "D": ""
+            "A": "1",
+            "B": "2",
+            "C": "3",
+            "D": "4"
           },
-          "correctOption": "",
-          "commentary": "",
-          "relatedSpotId": "KOSHI_SPOT_002"
+          "correctOption": "C",
+          "commentary": "正解は「3種類」です! 熊本県独自品種の「ゆうべに」や「恋みのり」、「さがほのか」の3品種のイチゴを栽培しています。",
+          "relatedSpotId": "KOSHI_SPOT_003"
         },
         {
           "questionNumber": 4,
-          "questionText": "",
+          "questionText": "合志百花園ファームは、いちご狩り農園として他にどんな施設が併設されていることで知られていますか?",
           "options": {
-            "A": "",
-            "B": "",
-            "C": "",
-            "D": ""
+            "A": "キャンプ場",
+            "B": "温泉施設",
+            "C": "ゴルフ場",
+            "D": "動物園"
           },
-          "correctOption": "",
-          "commentary": "",
-          "relatedSpotId": "KOSHI_SPOT_002"
+          "correctOption": "C",
+          "commentary": "正解は「ゴルフ場」です! ゴルフ場も併設されており、一緒にゴルフを楽しむことができます!",
+          "relatedSpotId": "KOSHI_SPOT_003"
         },
         {
           "questionNumber": 5,
-          "questionText": "",
+          "questionText": "いちご狩りで、家族連れにも大好評の手ごろな時間設定のコースは何分間でしょうか?",
           "options": {
-            "A": "",
-            "B": "",
-            "C": "",
-            "D": ""
+            "A": "20分",
+            "B": "30分",
+            "C": "45分",
+            "D": "90分"
           },
-          "correctOption": "",
-          "commentary": "",
-          "relatedSpotId": "KOSHI_SPOT_002"
+          "correctOption": "B",
+          "commentary": "レビューでは、家族連れなどにちょうど良い手ごろなコースとして30分が人気と紹介されています。",
+          "relatedSpotId": "KOSHI_SPOT_003"
         }
       ]
     },
     {
-      "id": "KOSHI_SPOT_002",
-      "spotName": "",
+      "id": "KOSHI_SPOT_004",
+      "spotName": "弁天山公園",
       "quizList": [
         {
           "questionNumber": 1,
-          "questionText": "",
+          "questionText": "弁天山の名前の由来にもなっている、この山に祀られている「七福神」の一柱は何という神様でしょう?",
           "options": {
-            "A": "",
-            "B": "",
-            "C": "",
-            "D": ""
+            "A": "毘沙門天",
+            "B": "恵比寿",
+            "C": "大黒天",
+            "D": "弁財天"
           },
-          "correctOption": "",
-          "commentary": "",
-          "relatedSpotId": "KOSHI_SPOT_002"
+          "correctOption": "D",
+          "commentary": "正解は「弁財天」です! 弁天山の名前は、七福神の一柱である「弁財天(弁天様)」が祭られていることに由来しています。",
+          "relatedSpotId": "KOSHI_SPOT_004"
         },
         {
           "questionNumber": 2,
-          "questionText": "",
+          "questionText": "弁天山の標高はどれくらいでしょう?",
           "options": {
-            "A": "",
-            "B": "",
-            "C": "",
-            "D": ""
+            "A": "90.5m",
+            "B": "145.75m",
+            "C": "200.0m",
+            "D": "187.31m"
           },
-          "correctOption": "",
-          "commentary": "",
-          "relatedSpotId": "KOSHI_SPOT_002"
+          "correctOption": "B",
+          "commentary": "正解は「145.75m」です! 合志市市内でも比較的高い位置にあり、展望台からの眺めが人気です!",
+          "relatedSpotId": "KOSHI_SPOT_004"
         },
         {
           "questionNumber": 3,
