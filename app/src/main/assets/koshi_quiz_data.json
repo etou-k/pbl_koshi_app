@@ -70,6 +70,361 @@
           "relatedSpotId": "KOSHI_SPOT_001"
         }
       ]
+    },
+    {
+      "id": "KOSHI_SPOT_002",
+      "spotName": "合志マンガミュージアム",
+      "quizList": [
+        {
+          "questionNumber": 1,
+          "questionText": "合志漫画ミュージアムでは何冊のマンガが読み放題でしょうか？",
+          "options": {
+            "A": "約5000冊",
+            "B": "約100000冊",
+            "C": "約20000冊",
+            "D": "約60000冊"
+          },
+          "correctOption": "C",
+          "commentary": "正解は「約20000冊」です！1960年代から現代までのマンガ約60000冊を収蔵し、そのうち約20000冊が読み放題です!",
+          "relatedSpotId": "KOSHI_SPOT_002"
+        },
+        {
+          "questionNumber": 2,
+          "questionText": "マンガミュージアムの建物は、かつて何の施設だったでしょうか？",
+          "options": {
+            "A": "西合志町役場",
+            "B": "旧西合志郷土資料館",
+            "C": "旧合志市立図書館",
+            "D": "合志市文化センター"
+          },
+          "correctOption": "B",
+          "commentary": "",
+          "relatedSpotId": "KOSHI_SPOT_002"
+        },
+        {
+          "questionNumber": 3,
+          "questionText": "",
+          "options": {
+            "A": "",
+            "B": "",
+            "C": "",
+            "D": ""
+          },
+          "correctOption": "",
+          "commentary": "",
+          "relatedSpotId": "KOSHI_SPOT_002"
+        },
+        {
+          "questionNumber": 4,
+          "questionText": "",
+          "options": {
+            "A": "",
+            "B": "",
+            "C": "",
+            "D": ""
+          },
+          "correctOption": "",
+          "commentary": "",
+          "relatedSpotId": "KOSHI_SPOT_002"
+        },
+        {
+          "questionNumber": 5,
+          "questionText": "",
+          "options": {
+            "A": "",
+            "B": "",
+            "C": "",
+            "D": ""
+          },
+          "correctOption": "",
+          "commentary": "",
+          "relatedSpotId": "KOSHI_SPOT_002"
+        }
+      ]
+    },
+    {
+      "id": "KOSHI_SPOT_003",
+      "spotName": "合志百花園ファーム",
+      "quizList": [
+        {
+          "questionNumber": 1,
+          "questionText": "合志百花園ファームで主に栽培されている果物は次のうちどれでしょう?",
+          "options": {
+            "A": "いちご",
+            "B": "メロン",
+            "C": "ぶどう",
+            "D": "みかん"
+          },
+          "correctOption": "A",
+          "commentary": "正解はいちご! 合志百花園ファームでは、イチゴ狩りを楽しむことができます!",
+          "relatedSpotId": "KOSHI_SPOT_003"
+        },
+        {
+          "questionNumber": 2,
+          "questionText": "いちご狩りに採用されている栽培方法で、通路が広く、お子様やご年配の方でも楽にいちごが取れる方式を何というでしょう?",
+          "options": {
+            "A": "土耕栽培",
+            "B": "養液栽培",
+            "C": "水耕栽培",
+            "D": "高設栽培"
+          },
+          "correctOption": "D",
+          "commentary": "正解は高設栽培! 高設栽培なので快適に収穫体験を楽しめるのも魅力です!",
+          "relatedSpotId": "KOSHI_SPOT_002"
+        },
+        {
+          "questionNumber": 3,
+          "questionText": "",
+          "options": {
+            "A": "",
+            "B": "",
+            "C": "",
+            "D": ""
+          },
+          "correctOption": "",
+          "commentary": "",
+          "relatedSpotId": "KOSHI_SPOT_002"
+        },
+        {
+          "questionNumber": 4,
+          "questionText": "",
+          "options": {
+            "A": "",
+            "B": "",
+            "C": "",
+            "D": ""
+          },
+          "correctOption": "",
+          "commentary": "",
+          "relatedSpotId": "KOSHI_SPOT_002"
+        },
+        {
+          "questionNumber": 5,
+          "questionText": "",
+          "options": {
+            "A": "",
+            "B": "",
+            "C": "",
+            "D": ""
+          },
+          "correctOption": "",
+          "commentary": "",
+          "relatedSpotId": "KOSHI_SPOT_002"
+        }
+      ]
+    },
+    {
+      "id": "KOSHI_SPOT_002",
+      "spotName": "",
+      "quizList": [
+        {
+          "questionNumber": 1,
+          "questionText": "",
+          "options": {
+            "A": "",
+            "B": "",
+            "C": "",
+            "D": ""
+          },
+          "correctOption": "",
+          "commentary": "",
+          "relatedSpotId": "KOSHI_SPOT_002"
+        },
+        {
+          "questionNumber": 2,
+          "questionText": "",
+          "options": {
+            "A": "",
+            "B": "",
+            "C": "",
+            "D": ""
+          },
+          "correctOption": "",
+          "commentary": "",
+          "relatedSpotId": "KOSHI_SPOT_002"
+        },
+        {
+          "questionNumber": 3,
+          "questionText": "",
+          "options": {
+            "A": "",
+            "B": "",
+            "C": "",
+            "D": ""
+          },
+          "correctOption": "",
+          "commentary": "",
+          "relatedSpotId": "KOSHI_SPOT_002"
+        },
+        {
+          "questionNumber": 4,
+          "questionText": "",
+          "options": {
+            "A": "",
+            "B": "",
+            "C": "",
+            "D": ""
+          },
+          "correctOption": "",
+          "commentary": "",
+          "relatedSpotId": "KOSHI_SPOT_002"
+        },
+        {
+          "questionNumber": 5,
+          "questionText": "",
+          "options": {
+            "A": "",
+            "B": "",
+            "C": "",
+            "D": ""
+          },
+          "correctOption": "",
+          "commentary": "",
+          "relatedSpotId": "KOSHI_SPOT_002"
+        }
+      ]
+    },
+    {
+      "id": "KOSHI_SPOT_002",
+      "spotName": "",
+      "quizList": [
+        {
+          "questionNumber": 1,
+          "questionText": "",
+          "options": {
+            "A": "",
+            "B": "",
+            "C": "",
+            "D": ""
+          },
+          "correctOption": "",
+          "commentary": "",
+          "relatedSpotId": "KOSHI_SPOT_002"
+        },
+        {
+          "questionNumber": 2,
+          "questionText": "",
+          "options": {
+            "A": "",
+            "B": "",
+            "C": "",
+            "D": ""
+          },
+          "correctOption": "",
+          "commentary": "",
+          "relatedSpotId": "KOSHI_SPOT_002"
+        },
+        {
+          "questionNumber": 3,
+          "questionText": "",
+          "options": {
+            "A": "",
+            "B": "",
+            "C": "",
+            "D": ""
+          },
+          "correctOption": "",
+          "commentary": "",
+          "relatedSpotId": "KOSHI_SPOT_002"
+        },
+        {
+          "questionNumber": 4,
+          "questionText": "",
+          "options": {
+            "A": "",
+            "B": "",
+            "C": "",
+            "D": ""
+          },
+          "correctOption": "",
+          "commentary": "",
+          "relatedSpotId": "KOSHI_SPOT_002"
+        },
+        {
+          "questionNumber": 5,
+          "questionText": "",
+          "options": {
+            "A": "",
+            "B": "",
+            "C": "",
+            "D": ""
+          },
+          "correctOption": "",
+          "commentary": "",
+          "relatedSpotId": "KOSHI_SPOT_002"
+        }
+      ]
+    },
+    {
+      "id": "KOSHI_SPOT_002",
+      "spotName": "",
+      "quizList": [
+        {
+          "questionNumber": 1,
+          "questionText": "",
+          "options": {
+            "A": "",
+            "B": "",
+            "C": "",
+            "D": ""
+          },
+          "correctOption": "",
+          "commentary": "",
+          "relatedSpotId": "KOSHI_SPOT_002"
+        },
+        {
+          "questionNumber": 2,
+          "questionText": "",
+          "options": {
+            "A": "",
+            "B": "",
+            "C": "",
+            "D": ""
+          },
+          "correctOption": "",
+          "commentary": "",
+          "relatedSpotId": "KOSHI_SPOT_002"
+        },
+        {
+          "questionNumber": 3,
+          "questionText": "",
+          "options": {
+            "A": "",
+            "B": "",
+            "C": "",
+            "D": ""
+          },
+          "correctOption": "",
+          "commentary": "",
+          "relatedSpotId": "KOSHI_SPOT_002"
+        },
+        {
+          "questionNumber": 4,
+          "questionText": "",
+          "options": {
+            "A": "",
+            "B": "",
+            "C": "",
+            "D": ""
+          },
+          "correctOption": "",
+          "commentary": "",
+          "relatedSpotId": "KOSHI_SPOT_002"
+        },
+        {
+          "questionNumber": 5,
+          "questionText": "",
+          "options": {
+            "A": "",
+            "B": "",
+            "C": "",
+            "D": ""
+          },
+          "correctOption": "",
+          "commentary": "",
+          "relatedSpotId": "KOSHI_SPOT_002"
+        }
+      ]
     }
   ]
 }
