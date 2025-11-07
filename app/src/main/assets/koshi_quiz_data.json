@@ -245,184 +245,184 @@
         },
         {
           "questionNumber": 3,
-          "questionText": "",
+          "questionText": "弁天山公園の展望台からの眺めが選ばれている、熊本県が選定した景勝地リストの正式名称は何でしょう?",
           "options": {
-            "A": "",
-            "B": "",
-            "C": "",
-            "D": ""
+            "A": "熊本ふるさと絶景百選",
+            "B": "熊本緑の百景",
+            "C": "肥後名勝景観五拾選",
+            "D": "火の国眺望百選"
           },
-          "correctOption": "",
-          "commentary": "",
-          "relatedSpotId": "KOSHI_SPOT_002"
+          "correctOption": "B",
+          "commentary": "正解は「熊本緑の百景」です! 弁天算の展望台からの眺望は、熊本県が誇る美しい景色の一つとして「熊本緑の百景」に選定されています。",
+          "relatedSpotId": "KOSHI_SPOT_004"
         },
         {
           "questionNumber": 4,
-          "questionText": "",
+          "questionText": "弁天山公園が「合志市の花見スポット」として有名なのは、主に何の木が咲き誇るからでしょう?",
           "options": {
-            "A": "",
-            "B": "",
-            "C": "",
-            "D": ""
+            "A": "サクラ",
+            "B": "ツツジ",
+            "C": "ヒガンバナ",
+            "D": "ウメ"
           },
-          "correctOption": "",
-          "commentary": "",
-          "relatedSpotId": "KOSHI_SPOT_002"
+          "correctOption": "A",
+          "commentary": "弁天山公園は桜の名所としてしられており、例年3月下旬から4月上旬にかけて、多くの花見客で賑わいます。",
+          "relatedSpotId": "KOSHI_SPOT_004"
         },
         {
           "questionNumber": 5,
-          "questionText": "",
+          "questionText": "弁天山公園に祀られている弁財天は、一般的に次のうちどの分野の神様として信仰されていることが多いでしょうか?",
           "options": {
-            "A": "",
-            "B": "",
-            "C": "",
-            "D": ""
+            "A": "漁業や公開の安全",
+            "B": "武運長久",
+            "C": "音楽や芸能、財宝",
+            "D": "五穀豊穣"
           },
-          "correctOption": "",
-          "commentary": "",
-          "relatedSpotId": "KOSHI_SPOT_002"
+          "correctOption": "C",
+          "commentary": "正解は「音楽や芸能、財宝」です! 弁財天は、元々は川の女神で、そこから転じて水、そして「美しさ」や「流れ」に関連する音楽・芸能、さらには「財宝」の神として信仰されています。",
+          "relatedSpotId": "KOSHI_SPOT_004"
         }
       ]
     },
     {
-      "id": "KOSHI_SPOT_002",
-      "spotName": "",
+      "id": "KOSHI_SPOT_005",
+      "spotName": "竹迫城跡公園",
       "quizList": [
         {
           "questionNumber": 1,
-          "questionText": "",
+          "questionText": "竹迫城は、鎌倉時代の初めに誰によって築城され、約400年間にわたり合志群の統治の拠点として栄えたと伝えられていますか?",
           "options": {
-            "A": "",
-            "B": "",
-            "C": "",
-            "D": ""
+            "A": "島津義弘",
+            "B": "加藤清正",
+            "C": "中原師員",
+            "D": "合志隆岑"
           },
-          "correctOption": "",
-          "commentary": "",
-          "relatedSpotId": "KOSHI_SPOT_002"
+          "correctOption": "C",
+          "commentary": "正解は「中原師員」です! 中原師員は、鎌倉時代に関東から地頭職として下向し、竹迫城を築城した人物と伝えられています。",
+          "relatedSpotId": "KOSHI_SPOT_005"
         },
         {
           "questionNumber": 2,
-          "questionText": "",
+          "questionText": "竹迫城は、最終的にいつ頃、どの勢力との戦いによって落城したと伝えられていますか?",
           "options": {
-            "A": "",
-            "B": "",
-            "C": "",
-            "D": ""
+            "A": "慶長5年(1600年)の関ケ原の戦い",
+            "B": "天正13年(1585年)の薩摩の島津氏との戦い",
+            "C": "永禄3年(1560年)の肥後国人一揆",
+            "D": "元弘3年(1333年)の鎌倉幕府滅亡"
           },
-          "correctOption": "",
-          "commentary": "",
-          "relatedSpotId": "KOSHI_SPOT_002"
+          "correctOption": "B",
+          "commentary": "正解は「天正13年の薩摩の島津氏との戦い」です! 竹迫城は、天正13年、九州制覇を目指す薩摩の島津氏との戦いに敗れ、落城しました。",
+          "relatedSpotId": "KOSHI_SPOT_005"
         },
         {
           "questionNumber": 3,
-          "questionText": "",
+          "questionText": "現在の竹迫城跡公園では、歴史を学び自然を楽しむためにさまざまな施設が整備されています。そのうち、世界中の竹を集めているユニークな施設は何でしょう？",
           "options": {
-            "A": "",
-            "B": "",
-            "C": "",
-            "D": ""
+            "A": "歴史資料館",
+            "B": "蛇の尾の池",
+            "C": "竹工芸体験広場",
+            "D": "竹植物園"
           },
-          "correctOption": "",
-          "commentary": "",
-          "relatedSpotId": "KOSHI_SPOT_002"
+          "correctOption": "D",
+          "commentary": "正解は「竹植物園」です! 竹植物園には世界中の約30数種の竹が集められており、公園の大きな特徴の一つです。",
+          "relatedSpotId": "KOSHI_SPOT_005"
         },
         {
           "questionNumber": 4,
-          "questionText": "",
+          "questionText": "竹迫城が持つ多くの別名（合志城、上庄城、蛇の尾城など）の中で、石垣を持たない中世の城の構造的特徴から来ていると考えられる別名は何でしょう？",
           "options": {
-            "A": "",
-            "B": "",
-            "C": "",
-            "D": ""
+            "A": "合志城",
+            "B": "穴の城",
+            "C": "上庄城",
+            "D": "蛇の尾城"
           },
-          "correctOption": "",
-          "commentary": "",
-          "relatedSpotId": "KOSHI_SPOT_002"
+          "correctOption": "B",
+          "commentary": "正解は「穴の城」です! 竹迫城は、自然の地形を利用し、土塁と空堀を主とした中世城郭の特徴を持つため、この別名が使われることがあります。",
+          "relatedSpotId": "KOSHI_SPOT_005"
         },
         {
           "questionNumber": 5,
-          "questionText": "",
+          "questionText": "竹迫城跡公園の大きな魅力の一つとして、初夏に公園北側を流れる東谷川で見ることができる神秘的な自然現象は何でしょう？",
           "options": {
-            "A": "",
-            "B": "",
-            "C": "",
-            "D": ""
+            "A": "ゲンジボタルの乱舞",
+            "B": "カブトムシの大量発生",
+            "C": "アユの遡上",
+            "D": "野鳥の集団渡来"
           },
-          "correctOption": "",
-          "commentary": "",
-          "relatedSpotId": "KOSHI_SPOT_002"
+          "correctOption": "A",
+          "commentary": "正解は「ゲンジボタルの乱舞」です! 公園北側を流れる東谷川はホタルの名所として知られており、初夏には幻想的なホタルの乱舞が見られます。",
+          "relatedSpotId": "KOSHI_SPOT_005"
         }
       ]
     },
     {
-      "id": "KOSHI_SPOT_002",
-      "spotName": "",
+      "id": "KOSHI_SPOT_006",
+      "spotName": "妙泉寺公園",
       "quizList": [
         {
           "questionNumber": 1,
-          "questionText": "",
+          "questionText": "妙泉寺公園の名前の由来にもなった、この地で古来より「絶えることがなかった」とされる自然の恵みは何でしょうか？",
           "options": {
-            "A": "",
-            "B": "",
-            "C": "",
-            "D": ""
+            "A": "蛍の群生",
+            "B": "湧水",
+            "C": "巨大な岩石",
+            "D": "桜並木"
           },
-          "correctOption": "",
-          "commentary": "",
-          "relatedSpotId": "KOSHI_SPOT_002"
+          "correctOption": "B",
+          "commentary": "正解は「湧水」です! 妙泉寺公園は、この湧水が枯れることのないよう願って名付けられました。古くから地域の生活や歴史を支えてきた、由緒ある場所です。",
+          "relatedSpotId": "KOSHI_SPOT_006"
         },
         {
           "questionNumber": 2,
-          "questionText": "",
+          "questionText": "妙泉寺公園内には2つの池があり、そのうち夏季に子どもたちが水遊びを楽しめる「水に親しむ」ための池の名称は？",
           "options": {
-            "A": "",
-            "B": "",
-            "C": "",
-            "D": ""
+            "A": "修景池",
+            "B": "親水池",
+            "C": "弁天地",
+            "D": "鯉の池"
           },
-          "correctOption": "",
-          "commentary": "",
-          "relatedSpotId": "KOSHI_SPOT_002"
+          "correctOption": "B",
+          "commentary": "正解は「親水池」です! もう一つの修景池には鯉が泳いでいます。夏場は親水池で涼みながら遊ぶ家族連れで賑わいますよ！",
+          "relatedSpotId": "KOSHI_SPOT_006"
         },
         {
           "questionNumber": 3,
-          "questionText": "",
+          "questionText": "整備された妙泉寺公園の外周園路が、地域住民の健康づくりに特に利用されている用途は何ですか？",
           "options": {
-            "A": "",
-            "B": "",
-            "C": "",
-            "D": ""
+            "A": "ドッグラン",
+            "B": "テントを張ってのデイキャンプ",
+            "C": "ジョギング・ウォーキング",
+            "D": "グラウンドゴルフ"
           },
-          "correctOption": "",
-          "commentary": "",
-          "relatedSpotId": "KOSHI_SPOT_002"
+          "correctOption": "C",
+          "commentary": "正解は「ジョギング・ウォーキング」です! 整備された園路と健康遊具があり、合志市の美しい町並みを眺めながら運動できる最適なスポットです。",
+          "relatedSpotId": "KOSHI_SPOT_006"
         },
         {
           "questionNumber": 4,
-          "questionText": "",
+          "questionText": "高台に位置する妙泉寺公園は、その景観の良さから特にどのような景色を楽しむビュースポットとして知られていますか？",
           "options": {
-            "A": "",
-            "B": "",
-            "C": "",
-            "D": ""
+            "A": "阿蘇山の遠景",
+            "B": "熊本市の夜景",
+            "C": "菊池川の流れ",
+            "D": "合志市の町並み一望"
           },
-          "correctOption": "",
-          "commentary": "",
-          "relatedSpotId": "KOSHI_SPOT_002"
+          "correctOption": "D",
+          "commentary": "正解は「合志市の町並み一望」です! 住宅街の中にありながら開放感があり、高台からの見晴らしは隠れた絶景スポットとなっています。",
+          "relatedSpotId": "KOSHI_SPOT_006"
         },
         {
           "questionNumber": 5,
-          "questionText": "",
+          "questionText": "妙泉寺公園に設置されている遊具のうち、木造と鉄筋が組み合わされた、熊本県内では珍しいタイプのアスレチック要素が強い遊具は何と呼ばれていますか？",
           "options": {
-            "A": "",
-            "B": "",
-            "C": "",
-            "D": ""
+            "A": "ターザンロープ",
+            "B": "複合遊具",
+            "C": "巨大ジャングルジム",
+            "D": "スプリング遊具"
           },
-          "correctOption": "",
-          "commentary": "",
-          "relatedSpotId": "KOSHI_SPOT_002"
+          "correctOption": "B",
+          "commentary": "正解は「複合遊具」です! 海外製の珍しいタイプの遊具が設定されており、子供たちが楽しく体を動かして遊べる人気の遊具です。",
+          "relatedSpotId": "KOSHI_SPOT_006"
         }
       ]
     }
