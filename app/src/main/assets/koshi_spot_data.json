@@ -1,6 +1,7 @@
 
 [
   {
+    "id": "KOSHI_SPOT_001",
     "name":"熊本県農業公園 カントリーパーク",
     "description":"広大な敷地で農業について学んだり、アスレチック遊具でのびのびと遊んだりできる公園です。年間を通じて様々なイベントが開催され、多くの家族連れで賑わいます。",
     "imageName":"ic_launcher_background, // 写真を `country_park.jpg` などで追加してください",
@@ -13,6 +14,7 @@
     ]
   },
   {
+    "id": "KOSHI_SPOT_005",
     "name":"竹迫城跡公園",
     "description":"鎌倉時代に築城され、約400年間にわたり合志郡の政治・軍事の中心でした。現在は公園として整備され、土塁や空堀の跡が残っています。",
     "imageName":"ic_launcher_background",
@@ -25,6 +27,7 @@
     ]
   },
   {
+    "id": "KOSHI_SPOT_004",
     "name":"弁天山公園",
     "description":"アスレチック広場や展望広場があり、「新くまもと百景」にも選ばれている眺望が自慢の公園です。古くから山全体が神として崇拝されてきました。",
     "imageName":"ic_launcher_background",
@@ -37,6 +40,7 @@
     ]
   },
   {
+    "id": "KOSHI_SPOT_006",
     "name":"妙泉寺公園",
     "description":"高台に位置し、合志市の町並みを一望できる公園です。夏には水遊びができる親水池や、アスレチック遊具があり、幅広い年代が楽しめます。",
     "imageName":"ic_launcher_background",
@@ -49,6 +53,7 @@
     ]
   },
   {
+    "id": "KOSHI_SPOT_007",
     "name":"蛇の尾公園",
     "description":"竹迫城跡のそばにある自然豊かな公園。湿地帯と丘陵部分で構成され、自然の地形が多く残っています。初夏にはホタルを観察できます。",
     "imageName":"ic_launcher_background",

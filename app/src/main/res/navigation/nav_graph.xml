@@ -14,13 +14,21 @@
         <action
             android:id="@+id/action_HomeFragment_to_QuizFragment"
             app:destination="@id/QuizFragment" />
+
+        <action
+            android:id="@+id/action_HomeFragment_to_SpotListFragment"
+            app:destination="@id/SpotListFragment" />
+
+        <action
+            android:id="@+id/action_HomeFragment_to_SpotDetailFragment"
+            app:destination="@id/SpotDetailFragment" />
     </fragment>
 
     <fragment
         android:id="@+id/QuizFragment"
         android:name="com.example.pbl_koshi_app.QuizFragment"
         android:label="クイズ画面"
-        tools:layout="@layout/fragment_quiz" >
+        tools:layout="@layout/activity_quiz" >
 
         <action
             android:id="@+id/action_QuizFragment_to_HomeFragment"
@@ -36,7 +44,32 @@
         <action
             android:id="@+id/action_SpotListFragment_to_HomeFragment"
             app:destination="@id/HomeFragment" />
+        <action
+            android:id="@+id/action_SpotListFragment_to_SpotDetailFragment"
+            app:destination="@id/SpotDetailFragment" />
+
 
     </fragment>
+
+    <fragment
+        android:id="@+id/SpotDetailFragment"
+        android:name="com.example.pbl_koshi_app.SpotDetailFragment"
+        android:label="スポット詳細"
+        tools:layout="@layout/activity_spot_detail" >
+        <argument
+            android:name="spot_id"
+            app:argType="string"
+            android:defaultValue="KOSHI_SPOT_001" />
+
+        <action
+            android:id="@+id/action_SpotDetailFragment_to_HomeFragment"
+            app:destination="@id/HomeFragment"
+            app:popUpTo="@id/HomeFragment"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+
+
+
 
 </navigation>

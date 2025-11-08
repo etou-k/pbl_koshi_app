@@ -2,6 +2,7 @@ package com.example.pbl_koshi_app.data;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -131,15 +132,58 @@ public class QuizActivity extends AppCompatActivity {
         }
     }
 
-    private void showFinalResult() {
-        quizArea.setVisibility(View.GONE);
+    private void showFinalResult() {        quizArea.setVisibility(View.GONE);
         finalResultArea.setVisibility(View.VISIBLE);
         textFinalScore.setText(score + " / " + currentQuizSet.getQuizList().size() + " 問正解");
+
+        // ★★★ ここからが追加する処理 ★★★
+
+        // 1. このクイズセットに関連するスポットのIDを取得する
+        //    (get(0)で最初の問題からIDを取得する前提)
+        String spotId = currentQuizSet.getQuizList().get(0).getRelatedSpotId();
+
+        // 2. SpotMasterを使って、スポットIDからSpotオブジェクトを取得する
+        //    SpotMasterとSpotクラスは、dataパッケージまたはルートパッケージにある必要があります
+        com.example.pbl_koshi_app.Spot currentSpot = com.example.pbl_koshi_app.data.SpotMaster.getInstance(this).findSpotById(spotId);
+
+        // 3. スポット情報が取得できたか確認し、ボタンのテキストを設定する
+        if (currentSpot != null) {
+            // strings.xmlからフォーマット文字列（"%1$s の詳細を見る"）を取得
+            String buttonTextFormat = getString(R.string.go_to_spot_detail_button);
+
+            // フォーマット文字列にスポット名を埋め込む
+            String buttonText = String.format(buttonTextFormat, currentSpot.getName());
+
+            // ボタンに生成したテキストをセット
+            buttonToSpotDetail.setText(buttonText);
+        } else {
+            // もしスポット情報が見つからなかった場合の代替テキスト
+            buttonToSpotDetail.setText("スポットの詳細を見る");
+        }
+        // ★★★ 追加処理はここまで ★★★
     }
 
+
+    /**
+     * スポット詳細画面へ遷移する（誘導）
+     * 呼び出し元にスポットIDを返して終了する
+     */
     private void goToSpotDetail() {
+        // クイズ対象のスポットIDを取得
+        String spotId = currentQuizSet.getQuizList().get(0).getRelatedSpotId();
+
+        // 呼び出し元（HomeFragment）に返すためのIntentを作成
+        Intent resultIntent = new Intent();
+        // "SPOT_ID"というキーで、取得したスポットIDをセット
+        resultIntent.putExtra("SPOT_ID", spotId);
+
+        // アクティビティが成功したことと、返すデータ(resultIntent)をセット
+        setResult(RESULT_OK, resultIntent);
+
+        // このアクティビティを終了する
         finish();
     }
+
 
     // --- データローダー部分を完全に修正 ---
     private static class QuizDataFile {
