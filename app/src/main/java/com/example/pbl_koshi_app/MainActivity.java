@@ -1,5 +1,6 @@
 package com.example.pbl_koshi_app;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import com.google.android.material.snackbar.Snackbar;
@@ -12,6 +13,8 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
+
+import android.widget.Toast;
 
 import com.example.pbl_koshi_app.databinding.ActivityMainBinding;
 
@@ -35,15 +38,6 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-
-        binding.fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAnchorView(R.id.fab)
-                        .setAction("Action", null).show();
-            }
-        });
     }
 
     @Override
@@ -61,7 +55,12 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_reset_trivia) {
+            SharedPreferences prefs = getSharedPreferences(TriviaActivity.PREFS_NAME, MODE_PRIVATE);
+            prefs.edit().remove(TriviaActivity.KEY_DISCOVERED_TRIVIA).apply();
+            // ユーザーに通知
+            Toast.makeText(this, "豆知識のデータをリセットしました", Toast.LENGTH_SHORT).show();
+
             return true;
         }
 
