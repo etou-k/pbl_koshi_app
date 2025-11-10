@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.pbl_koshi_app.MainActivity">
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/action_reset_trivia"
         android:orderInCategory="100"
-        android:title="@string/action_settings"
+        android:title="豆知識データリセット"
         app:showAsAction="never" />
 </menu>

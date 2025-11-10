@@ -48,13 +48,14 @@
     <!-- 宝箱（ImageButton）の要素 -->
     <ImageButton
         android:id="@+id/button_trivia_treasure"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="fitCenter"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="24dp"
         android:background="?attr/selectableItemBackgroundBorderless"
         android:contentDescription="豆知識の宝箱"
-        app:srcCompat="@android:drawable/ic_dialog_map" /> <!-- 仮のアイコンです -->
+        app:srcCompat="@drawable/treasure_chest_closed" />
 
     <Button
         android:id="@+id/button_back_to_home"
