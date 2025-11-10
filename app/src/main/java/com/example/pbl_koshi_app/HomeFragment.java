@@ -6,21 +6,24 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast; // Toastをインポート
 
-import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.pbl_koshi_app.data.QuizActivity;
+import com.example.pbl_koshi_app.data.SpotDataLoader; // SpotDataLoaderをインポート
 import com.example.pbl_koshi_app.databinding.FragmentHomeBinding;
+
+import java.util.List; // Listをインポート
 
 public class HomeFragment extends Fragment {
 
     private FragmentHomeBinding binding;
 
+    // ★★★ ここからが修正の核心 ★★★
     private final ActivityResultLauncher<Intent> startQuizActivityLauncher = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(),
             result -> {
@@ -30,14 +33,31 @@ public class HomeFragment extends Fragment {
                     String spotId = result.getData().getStringExtra("SPOT_ID");
 
                     if (spotId != null && !spotId.isEmpty()) {
-                        // 受け取ったspotIdを使ってSpotDetailFragmentへ遷移
-                        Bundle bundle = new Bundle();
-                        bundle.putString("spot_id", spotId); // nav_graphのargument名と一致させる
-                        NavHostFragment.findNavController(HomeFragment.this)
-                                .navigate(R.id.action_HomeFragment_to_SpotDetailFragment, bundle);
+                        // 1. 全観光地リストをJSONから読み込む
+                        List<Spot> allSpots = SpotDataLoader.loadSpots(requireContext());
+
+                        // 2. IDが一致するSpotオブジェクトを探す
+                        Spot targetSpot = null;
+                        for (Spot spot : allSpots) {
+                            if (spot.getId().equals(spotId)) {
+                                targetSpot = spot;
+                                break; // 見つかったらループを抜ける
+                            }
+                        }
+
+                        // 3. 見つかったSpotオブジェクトをSpotDetailActivityに渡して起動
+                        if (targetSpot != null) {
+                            Intent intent = new Intent(getActivity(), SpotDetailActivity.class);
+                            intent.putExtra("spot", targetSpot);
+                            startActivity(intent);
+                        } else {
+                            // 万が一、IDに一致するSpotが見つからなかった場合
+                            Toast.makeText(getContext(), "該当する観光地の詳細が見つかりませんでした", Toast.LENGTH_SHORT).show();
+                        }
                     }
                 }
             });
+    // ★★★ ここまで ★★★
 
     @Override
     public View onCreateView(
@@ -60,15 +80,14 @@ public class HomeFragment extends Fragment {
         // クイズ(QuizActivity)画面へ
         binding.buttonQuiz.setOnClickListener(v -> {
             Intent intent = new Intent(getActivity(), QuizActivity.class);
-            startQuizActivityLauncher.launch(intent);
+            startQuizActivityLauncher.launch(intent); // 通常のstartActivityではなく、ランチャー経由で起動
         });
 
-        // ★★★ 図鑑(EncyclopediaActivity)画面への処理を追加 ★★★
+        // 図鑑(EncyclopediaActivity)画面へ
         binding.buttonEncyclopedia.setOnClickListener(v -> {
             Intent intent = new Intent(getActivity(), EncyclopediaActivity.class);
             startActivity(intent);
         });
-
     }
 
     @Override

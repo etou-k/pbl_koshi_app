@@ -9,18 +9,21 @@
     tools:context=".HomeFragment">
 
     <!-- 1. メイン画像 -->
+
+    <!-- 2. タイトルテキスト -->
     <ImageView
         android:id="@+id/image_header"
         android:layout_width="0dp"
-        android:layout_height="220dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/ic_launcher_background"
+        android:layout_height="180dp"
+        android:layout_marginTop="4dp"
+        android:contentDescription="合志市のイメージ画像"
+        android:scaleType="fitCenter"
+        android:src="@drawable/homefragment"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="合志市のイメージ画像" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- 2. タイトルテキスト -->
     <TextView
         android:id="@+id/text_title"
         android:layout_width="wrap_content"
