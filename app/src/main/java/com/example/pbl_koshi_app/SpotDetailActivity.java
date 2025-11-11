@@ -23,6 +23,7 @@ import com.google.android.gms.location.LocationCallback;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationResult;
 import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.location.Priority;
 
 import java.util.Locale;
 
@@ -112,6 +113,8 @@ public class SpotDetailActivity extends AppCompatActivity {
                         // 距離に応じて宝箱の状態を更新
                         updateTreasureButtonState(distanceInMeters < DISTANCE_THRESHOLD_METERS);
                         updateDistanceText(distanceInMeters);
+
+                        Toast.makeText(SpotDetailActivity.this, "現在地取得成功！ 距離: " + distanceInMeters + " m", Toast.LENGTH_SHORT).show();
                     }
                 }
             }
@@ -142,10 +145,9 @@ public class SpotDetailActivity extends AppCompatActivity {
     }
 
     private void startLocationUpdates() {
-        LocationRequest locationRequest = LocationRequest.create();
-        locationRequest.setInterval(10000); // 10秒ごとに更新
-        locationRequest.setFastestInterval(5000); // 最速5秒ごとに更新
-        locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+        LocationRequest locationRequest = new LocationRequest.Builder(Priority.PRIORITY_HIGH_ACCURACY, 10000)
+                .setMinUpdateIntervalMillis(5000)
+                .build();
 
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             return; // このチェックはstartLocationUpdatesの前に既に行われているはず
