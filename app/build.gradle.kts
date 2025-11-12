@@ -46,6 +46,8 @@ dependencies {
     implementation("com.google.android.gms:play-services-location:21.2.0")
     // Gson for JSON parsing
     implementation("com.google.code.gson:gson:2.10.1")
+    implementation(libs.androidx.navigation.navigation.fragment2)
+    implementation(libs.androidx.navigation.navigation.ui)
 
     // --- ★★★ ここからが修正箇所 ★★★ ---
 

@@ -4,6 +4,7 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Looper;
 import android.widget.Button;
@@ -56,7 +57,7 @@ public class SpotDetailActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_spot_detail);
+        setContentView(R.layout.fragment_spot_detail);
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
 
@@ -67,6 +68,7 @@ public class SpotDetailActivity extends AppCompatActivity {
         triviaTreasureButton = findViewById(R.id.button_trivia_treasure);
         distanceTextView = findViewById(R.id.text_distance_to_treasure);
 
+        Button showOnMapButton = findViewById(R.id.buttonShowOnMap);
 
         Intent intent = getIntent();
         currentSpot = (Spot) intent.getSerializableExtra("spot");
@@ -94,7 +96,30 @@ public class SpotDetailActivity extends AppCompatActivity {
             startActivity(triviaIntent);
         });
 
-        // 最初は宝箱を無効状態にしておく
+        showOnMapButton.setOnClickListener(v -> {
+            // 表示したい観光地の緯度と経度を取得
+            double latitude = currentSpot.getLatitude();
+            double longitude = currentSpot.getLongitude();
+            String spotName = currentSpot.getName();
+
+            // Googleマップアプリを起動するためのURI（住所のようなもの）を作成
+            // geo:緯度,経度?q=緯度,経度(ラベル) という形式
+            String mapUri = String.format(Locale.US, "geo:%f,%f?q=%f,%f(%s)", latitude, longitude, latitude, longitude, spotName);
+
+            // URIを使ってインテントを作成
+            Intent mapIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(mapUri));
+
+            // このインテントを処理できるアプリ（つまりGoogleマップアプリ）があるか確認
+            if (mapIntent.resolveActivity(getPackageManager()) != null) {
+                // Googleマップアプリを起動
+                startActivity(mapIntent);
+            } else {
+                // Googleマップアプリがインストールされていない場合の処理
+                Toast.makeText(this, "地図アプリが見つかりません", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+            // 最初は宝箱を無効状態にしておく
         updateTreasureButtonState(false);
 
         // 位置情報更新のコールバックを定義

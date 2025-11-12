@@ -55,7 +55,7 @@
         android:id="@+id/SpotDetailFragment"
         android:name="com.example.pbl_koshi_app.SpotDetailFragment"
         android:label="スポット詳細"
-        tools:layout="@layout/activity_spot_detail" >
+        tools:layout="@layout/fragment_spot_detail" >
         <argument
             android:name="spot_id"
             app:argType="string"

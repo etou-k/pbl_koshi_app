@@ -1,5 +1,7 @@
 package com.example.pbl_koshi_app;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -44,6 +46,30 @@ public class SpotDetailFragment extends Fragment {
             binding.spotImageView.setImageResource(currentSpot.getImageResourceId()); // 仮のID
             binding.spotNameTextView.setText(currentSpot.getName());
             binding.spotDescriptionTextView.setText(currentSpot.getDescription());
+
+            // 「地図」ボタンのクリック処理
+            binding.buttonShowOnMap.setOnClickListener(v -> {
+                // スポットの緯度・経度を取得
+                double latitude = currentSpot.getLatitude();
+                double longitude = currentSpot.getLongitude();
+                String spotName = currentSpot.getName();
+
+                // GoogleマップのURIを作成
+                // geo:緯度,経度?q=緯度,経度(ピンの名前)
+                String uriString = "geo:" + latitude + "," + longitude + "?q=" + latitude + "," + longitude + "(" + Uri.encode(spotName) + ")";
+                Uri gmmIntentUri = Uri.parse(uriString);
+
+                // マップアプリを起動するためのインテントを作成
+                Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                // Googleマップアプリを指定する (任意ですが、確実性が増します)
+                mapIntent.setPackage("com.google.android.apps.maps");
+
+                // デバイスにGoogleマップがインストールされているか確認
+                if (mapIntent.resolveActivity(getActivity().getPackageManager()) != null) {
+                    startActivity(mapIntent);
+                }
+            });
+
         } else {
             // エラー処理: IDが見つからなかった場合など
             binding.spotNameTextView.setText("スポット情報が見つかりません");
