@@ -47,6 +47,8 @@ dependencies {
 
     // Gson for JSON parsing
     implementation("com.google.code.gson:gson:2.10.1")
+    implementation(libs.androidx.navigation.navigation.fragment2)
+    implementation(libs.androidx.navigation.navigation.ui)
 
     // ★★★ Google Maps API (免許) ★★★
     implementation("com.google.android.gms:play-services-maps:18.2.0")
