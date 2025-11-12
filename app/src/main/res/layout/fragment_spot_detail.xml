@@ -65,22 +65,11 @@
         android:gravity="center"
         android:orientation="horizontal">
 
-        <!--左側のマップボタン-->
-
-        <Button
-            android:id="@+id/buttonShowOnMap"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:text="マップ" />
-
-        <!--右側のホームに戻るボタン-->
-
+        <!--ホームに戻るボタン-->
         <Button
             android:id="@+id/button_back_to_home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
             android:text="ホームに戻る" />
     </LinearLayout>
 
