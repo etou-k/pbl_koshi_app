@@ -1,5 +1,5 @@
 [versions]
-agp = "8.13.1"
+agp = "8.13.0"
 junit = "4.13.2"
 junitVersion = "1.1.5"
 espressoCore = "3.5.1"
@@ -12,7 +12,6 @@ activity = "1.8.0"
 navigationFragmentVersion = "2.4.2"
 navigationUiVersion = "2.9.5"
 androidxNavigationFragment = "2.9.5"
-androidxNavigationFragmentVersion = "2.7.6"
 androidxNavigationUi = "2.9.6"
 
 [libraries]
@@ -29,7 +28,6 @@ gson = { group = "com.google.code.gson", name = "gson", version = "2.10.1" }
 androidx-navigation-fragment = { group = "androidx.navigation", name = "navigation-fragment", version.ref = "navigationFragmentVersion" }
 androidx-navigation-ui = { group = "androidx.navigation", name = "navigation-ui", version.ref = "navigationUiVersion" }
 androidx-navigation-navigation-fragment = { group = "androidx.navigation", name = "navigation-fragment", version.ref = "androidxNavigationFragment" }
-androidx-navigation-navigation-fragment2 = { group = "androidx.navigation", name = "navigation-fragment", version.ref = "androidxNavigationFragmentVersion" }
 androidx-navigation-navigation-ui = { group = "androidx.navigation", name = "navigation-ui", version.ref = "androidxNavigationUi" }
 
 [plugins]
