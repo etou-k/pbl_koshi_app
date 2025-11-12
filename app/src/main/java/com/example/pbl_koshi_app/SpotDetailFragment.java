@@ -93,8 +93,7 @@ public class SpotDetailFragment extends Fragment {
             // エラーハンドリング
             binding.spotNameTextView.setText("スポット情報が見つかりません");
             Toast.makeText(requireContext(), "スポット情報の読み込みに失敗しました", Toast.LENGTH_LONG).show();
-            // ボタンなどを無効化
-            binding.buttonShowOnMap.setEnabled(false);
+            
             binding.buttonTriviaTreasure.setEnabled(false);
             return; // 処理を中断
         }
@@ -124,20 +123,6 @@ public class SpotDetailFragment extends Fragment {
             startActivity(triviaIntent);
         });
 
-        // 「地図で表示」ボタン
-        binding.buttonShowOnMap.setOnClickListener(v -> {
-            // Googleマップアプリを起動
-            String mapUri = String.format(Locale.US, "geo:%f,%f?q=%f,%f(%s)",
-                    currentSpot.getLatitude(), currentSpot.getLongitude(),
-                    currentSpot.getLatitude(), currentSpot.getLongitude(),
-                    Uri.encode(currentSpot.getName()));
-            Intent mapIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(mapUri));
-            if (mapIntent.resolveActivity(requireActivity().getPackageManager()) != null) {
-                startActivity(mapIntent);
-            } else {
-                Toast.makeText(requireContext(), "地図アプリが見つかりません", Toast.LENGTH_SHORT).show();
-            }
-        });
     }
 
     private void setupLocationCallback() {
