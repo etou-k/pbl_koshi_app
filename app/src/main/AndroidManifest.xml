@@ -36,6 +36,11 @@
         <activity android:name=".EncyclopediaActivity" android:exported="false"/>
         <activity android:name=".data.QuizActivity" android:exported="false"/>
 
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCppFjumrwuJLbZd91i0omfVDFV_T6jDqM" />
+
+
     </application>
 
 </manifest>

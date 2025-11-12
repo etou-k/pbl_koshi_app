@@ -24,9 +24,17 @@ import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationResult;
 import com.google.android.gms.location.LocationServices;
 
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapView;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
+
 import java.util.Locale;
 
-public class SpotDetailActivity extends AppCompatActivity {
+
+public class SpotDetailActivity extends AppCompatActivity implements OnMapReadyCallback{
 
     private static final double DISTANCE_THRESHOLD_METERS = 100.0; // 宝箱を開けられる距離（メートル）
 
@@ -37,6 +45,9 @@ public class SpotDetailActivity extends AppCompatActivity {
     private LocationCallback locationCallback;
 
     private TextView distanceTextView;
+
+    private MapView mapView;
+    private GoogleMap googleMap;
 
     // 位置情報のパーミッションリクエストランチャー
     private final ActivityResultLauncher<String> requestPermissionLauncher = registerForActivityResult(
@@ -66,6 +77,9 @@ public class SpotDetailActivity extends AppCompatActivity {
         triviaTreasureButton = findViewById(R.id.button_trivia_treasure);
         distanceTextView = findViewById(R.id.text_distance_to_treasure);
 
+        mapView = findViewById(R.id.mapView);
+        mapView.onCreate(savedInstanceState); // ★重要★
+        mapView.getMapAsync(this);
 
         Intent intent = getIntent();
         currentSpot = (Spot) intent.getSerializableExtra("spot");
@@ -119,18 +133,47 @@ public class SpotDetailActivity extends AppCompatActivity {
     }
 
     @Override
+    public void onMapReady(@NonNull GoogleMap map) {
+        googleMap = map; // 呼び出された魂を、自分の変数に保持する
+
+        if (currentSpot != null) {
+            // 1. 観光地の緯度経度から、地図上の「点」を作成
+            LatLng spotLocation = new LatLng(currentSpot.getLatitude(), currentSpot.getLongitude());
+
+            // 2. その点に、観光地名のマーカー（ピン）を立てる
+            googleMap.addMarker(new MarkerOptions().position(spotLocation).title(currentSpot.getName()));
+
+            // 3. 地図のカメラを、その点に、ズームレベル15で移動させる
+            googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(spotLocation, 15f));
+        }
+    }
+
+    @Override
     protected void onResume() {
         super.onResume();
+        mapView.onResume();
         checkLocationPermissionAndStartUpdates();
     }
 
     @Override
     protected void onPause() {
         super.onPause();
+        mapView.onPause();
         // 画面が見えなくなったら位置情報の更新を停止し、バッテリー消費を抑える
         fusedLocationClient.removeLocationUpdates(locationCallback);
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mapView.onDestroy();
+    }
+
+    @Override
+    public void onLowMemory() {
+        super.onLowMemory();
+        mapView.onLowMemory();
+    }
     private void checkLocationPermissionAndStartUpdates() {
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             // パーミッションがない場合はリクエスト
